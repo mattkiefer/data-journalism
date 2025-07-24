@@ -1,0 +1,42 @@
+<head>
+  <!-- load plot and d3 -->
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>
+</head>
+<body>
+  <!-- chart container -->
+  <div id="chart"></div>
+  <script>
+    // get data from file
+    fetch('birds.json')
+      .then(response => response.json()) // load as json
+      .then(rawData => {
+        // convert to array of objects
+        const data = rawData.map(d => ({
+          year: d[0],    // year is the first value
+          count: d[1]    // count is the second value
+        }));
+
+        // create bar chart using observable plot
+        const chart = Plot.plot({
+          x: {label: "Year"},        // x axis label
+          y: {label: "Count"},       // y axis label
+          marks: [
+            Plot.barY(data, {
+              x: "year",             // refers to json keys
+              y: "count",            // refers to json values
+              fill: "steelblue"      // set bar color (optional)
+            })
+          ]
+        });
+
+        // append chart to container div
+        document.getElementById("chart").appendChild(chart);
+      })
+      .catch(error => {
+        // log failures (optional)
+        console.error("loading error:", error);
+      });
+  </script>
+</body>
+</html>

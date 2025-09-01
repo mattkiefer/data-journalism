@@ -1,6 +1,6 @@
 # import requests to get data
 # and pandas to analyze it
-import requests, json, pandas
+import requests, pandas
 
 # get data from the data portal
 # with no row limits

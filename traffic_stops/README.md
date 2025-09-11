@@ -15,7 +15,7 @@ Download the database:
 [https://drive.google.com/file/d/1qlsd7pveQodROyiI9kK4QfqATTliYhTH/view?usp=drive\_link](https://drive.google.com/file/d/1qlsd7pveQodROyiI9kK4QfqATTliYhTH/view?usp=drive_link)
 
 Extract/unzip the database in your local repo, i.e. this path:   
-`\~/Documents/GitHub/data-journalism/traffic\_stops`
+`~/Documents/GitHub/data-journalism/traffic\_stops`
 
 Use a virtualenv (from terminal):  
 ```

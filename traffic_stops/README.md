@@ -14,14 +14,15 @@ Clone the repository:
 Download the database:   
 [https://drive.google.com/file/d/1qlsd7pveQodROyiI9kK4QfqATTliYhTH/view?usp=drive\_link](https://drive.google.com/file/d/1qlsd7pveQodROyiI9kK4QfqATTliYhTH/view?usp=drive_link)
 
-Extract/unzip the database in your local repo, i.e. this path:   
-\~/Documents/GitHub/data-journalism/traffic\_stops
+Extract/unzip the database in your local repo, i.e. this path: `~/Documents/GitHub/data-journalism/traffic_stops`
 
 Use a virtualenv (from terminal):  
-cd \~/Documents/GitHub/data-journalism/traffic\_stops  
-python3 \-m venv .venv  
+```
+cd ~/Documents/GitHub/data-journalism/traffic_stops  
+python3 -m venv .venv  
 . .venv/bin/activate  
-pip install \-r requirements.txt
+pip install -r requirements.txt
+```
 
 ## Using the database
 
@@ -30,8 +31,10 @@ You can use SQL, python/pandas or R to work with the database.
 The file [console.py](http://console.py) includes sample queries and analysis code to get started in python.
 
 To access the sample objects in [console.py](http://console.py), start a python shell in your terminal:  
+```
 ipython  
-from console import \*
+from console import *
+```
 
 ## Exercises
 
